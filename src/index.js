@@ -6,8 +6,8 @@ const client = new Client({
   partials: [Partials.Channel]
 });
 
-client.once('ready', () => {
-  console.log(`🤖 Bot conectado como ${client.user.tag}`);
+client.once('clientReady', (c) => {
+ console.log(`🤖 Bot conectado como ${c.user.tag}`);
 });
 
 client.on('interactionCreate', async (interaction) => {
